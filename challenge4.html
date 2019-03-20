@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        /* background-image: url(''); */
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+
+
+
+    <script>
+    // I used Two functions here.  Starter idea at: 
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+
+        function upDate(previewPic){
+            // console.log(previewPic)
+            console.log("My function is being called!!!");            
+            var largeImage = document.getElementById("image");
+            largeImage.style.backgroundImage = "url('"+previewPic.src+"')";            
+            document.getElementById("image").innerHTML = previewPic.alt;
+            
+        }
+
+
+        function unDo(previewPic){
+            
+            console.log("This function is also being called!!!");
+            var largeImage = document.getElementById("image")
+            largeImage.style.backgroundImage = "";
+            document.getElementById("image").innerHTML = "Hover or tab over/into an image below.";
+
+        }
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" 
+            tabindex="0";
+            onmouseover="upDate(this)"
+            onmouseout="unDo(this)"
+            onfocus="upDate(this)"
+            onblur="unDo(this)"
+            alt = "Deshebrada Adobada" 
+            src = "images/menu2.jpg">
+            <!-- src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg" -->
+            <!-- alt = "Styling with a Bandana" -->
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
+        <img class = "preview" 
+            tabindex="0";
+            onmouseover="upDate(this)"
+            onmouseout="unDo(this)"
+            onfocus="upDate(this)"
+            onblur="unDo(this)"
+            alt = "Picadillo de Res" 
+            src = "images/menu4.jpg">
+            <!-- src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG" -->
+            <!-- alt = "With My Boy" -->
+    
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" 
+            tabindex="0";
+            onmouseover="upDate(this)"
+            onmouseout="unDo(this)"
+            onfocus="upDate(this)"
+            onblur="unDo(this)" 
+            alt = "Pollo en nuestra salsa tradicional" 
+            src = "images/menu5.jpg">
+            <!-- src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" -->
+            <!-- alt = "Young Puppy" -->
+
+        <img class = "preview" 
+            tabindex="0";
+            onmouseover="upDate(this)"
+            onmouseout="unDo(this)"
+            onfocus="upDate(this)"
+            onblur="unDo(this)" 
+            alt = "Muffin de masa madre" 
+            src = "images/muffin.jpg">
+
+        <img class = "preview" 
+            tabindex="0";
+            onmouseover="upDate(this)"
+            onmouseout="unDo(this)"
+            onfocus="upDate(this)"
+            onblur="unDo(this)" 
+            alt = "Nuestra Panadería" 
+            src = "images/panaderia.jpg">
+
+        <img class = "preview" 
+            tabindex="0";
+            onmouseover="upDate(this)"
+            onmouseout="unDo(this)"
+            onfocus="upDate(this)"
+            onblur="unDo(this)" 
+            alt = "Pan de Elote" 
+            src = "images/panelote.jpg">
+</body>
+</html>
+    
